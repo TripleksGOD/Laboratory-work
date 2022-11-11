@@ -1,0 +1,62 @@
+#include <iostream>
+#include <stdio.h>
+#include <windows.h>
+#include <conio.h>
+#include <math.h>
+
+using namespace std;
+
+int main()
+
+{
+    int day, month, year;
+    int c, y;
+    int m;
+    int d;
+    int a;
+    int f;
+    
+    cout << ("Input day ,month ,year ");
+    cin >> day >> month >> year;
+    
+    if (month == 1 || month == 2)
+        year--;
+        m = month - 2;
+    
+    if (m <= 0) 
+        m += 12;
+    
+    c = year / 100;
+    y = year - c * 100;
+    d = (day + (13 * m - 1) / 5 + y + y / 4 + c / 4 - 2 * c + 777) % 7;
+    
+    switch (d)
+    {
+    case 0:
+        cout << "Sunday" << endl; break;
+
+    case 1:
+        cout << "Monday" << endl; break;
+
+    case 2:
+        cout << "Tuesday" << endl; break;
+
+    case 3:
+        cout << "Wednesday" << endl; break;
+
+    case 4:
+        cout << "Thursday" << endl; break;
+
+    case 5:
+        cout << "Friday" << endl; break;
+
+    case 6:
+        cout << "Saturday" << endl;
+        break;
+
+    default:
+        cout << "Invalid option";
+    }
+              
+    return 0;
+}
