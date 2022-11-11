@@ -1,0 +1,23 @@
+#include <iostream>
+#include <stdio.h>
+#include <windows.h>
+#include <conio.h>
+#include <math.h>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    int  x, y, z, f;//задаємо змінні
+
+    cout << "Enter x, y, z: ";//просимо ввести дані
+    cin >> x >> y >> z;
+
+    f = (double)min(x, pow((x + y), 2)) / pow(x, 2) + max(pow(y, 3), x);//розраховуємо функцію
+   
+    cout << "Solve = " << f; //виводимо на екран
+    
+    return 0;
+
+}
